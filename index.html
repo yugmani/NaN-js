@@ -1,0 +1,54 @@
+<div id="app">
+  <h2>
+    What is NaN in JavaScript? What is its type? How can you reliably test if a
+    value is equal to NaN?
+  </h2>
+  <ul>
+    <li>
+      In JavaScript, NaN is a property of the global Object. In other words, it
+      is a variable available in the Global scope.
+    </li>
+    <li>It stands for Not-A-Number but interestingly, its type is number.</li>
+    <li>
+      It is used to denote an object that is not or does not compute to a
+      number, in a context when number operations are applied on that object.
+    </li>
+    <li>
+      Another interesting fact about NaN is, it never equals to itself. So NaN
+      == NaN or NaN === NaN is always false.
+    </li>
+    <li>
+      <h4>Testing for NaN:</h4>
+      <ol>
+        <li>
+          Since a NaN is never equal to another NaN, a self-comparison of a
+          value makes it the most reliable way to test if the value is NaN.
+        </li>
+        <li>
+          Other ways to test if an object is NaN are using the isNaN() global
+          method and Number.isNaN
+        </li>
+        <li>
+          isNaN() waits for type coercion on the string before it makes the
+          comparison
+        </li>
+        <li>So using isNaN() is not very reliable to test for NaN</li>
+        <li>
+          Type coercion is not present with Number.isNaN(). Instead, it compares
+          the string directly.
+        </li>
+        <li>
+          Number.isNaN() more reliable than isNaN() while testing for NaN
+          values.
+        </li>
+      </ol>
+    </li>
+  </ul>
+  <p>
+    Source:
+    <a
+      href="https://dev.to/anewman15/what-is-nan-what-is-its-type-how-can-you-reliably-test-if-a-value-is-equal-to-nan-4bp3"
+      >NaN in JavaScript by Abdullah Numan</a
+    >
+  </p>
+</div>
